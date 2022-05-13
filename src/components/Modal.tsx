@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./Modal.scss";
+import { InnerModal, OuterModal } from "./Modal.styled";
 
 type ModalComponent = (props: {
   children: React.ReactElement;
@@ -10,8 +10,8 @@ console.log("modalize");
 export const Modal: ModalComponent = ({ children, isOpen }) => {
   if (!isOpen) return null;
   return (
-    <div className="modal">
-      <div className="inner-modal">{children}</div>
-    </div>
+    <OuterModal>
+      <InnerModal>{children}</InnerModal>
+    </OuterModal>
   );
 };

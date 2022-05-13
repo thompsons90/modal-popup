@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { Confirmation } from "./pages/Confirmation";
 import { Landing } from "./pages/Landing";
+import "./App.scss";
 
 function App() {
   return (

@@ -1,6 +1,18 @@
 import React, { FormEvent, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Modal } from "../components/Modal";
+import { ThemeProvider } from "styled-components";
+// import { theme, GlobalStyle } from "../Variables.styled";
+import {
+  PopupContainer,
+  PopupTopContainer,
+  PopupBotContainer,
+  XButton,
+  PopupTopTextContainer,
+  PopupBotTextContainer,
+  FormContainer,
+  EmailAddress,
+} from "./Landing.styled";
 
 // interface LandingProps {
 //   open: boolean;
@@ -30,44 +42,48 @@ export const Landing: LandingComponent = () => {
         <button onClick={() => setIsOpen(true)}>Special Offer!</button>
         {/* <FirstPopup open={isOpen} onClose={() => setIsOpen(false)}></FirstPopup> */}
       </div>
+
       <Modal isOpen={isOpen}>
-        <div id="pop-container">
-          <div id="popupOne">
-            <div id="close-button-container">
-              <button onClick={() => setIsOpen(false)} id="x-button">
-                X
-              </button>
-            </div>
-            <div id="first-popup-text-container">
+        <PopupContainer>
+          <XButton onClick={() => setIsOpen(false)}>X</XButton>
+          <PopupTopContainer>
+            <PopupTopTextContainer>
               <h1>Get Your Style On</h1>
               <hr />
-              <div id="and-container">
-                <h2>&</h2>
-              </div>
+            </PopupTopTextContainer>
+            <h2>&</h2>
+            <PopupBotTextContainer>
+              <div id="and-container"></div>
               <h3>20</h3>
               <div id="percent-container">
                 <h4>%</h4>
                 <p>OFF</p>
               </div>
-              <form onSubmit={handleSubmit} action="/" method="get" id="form">
-                <div id="user-input-container">
-                  <label>
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      placeholder="Email Address"
-                      required
-                    />
-                  </label>
-                </div>
-                <div id="signupBtn-container">
-                  <input type="submit" value="Sign Up" id="submitBtn" />
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
+            </PopupBotTextContainer>
+          </PopupTopContainer>
+          <PopupBotContainer>
+            <FormContainer
+              onSubmit={handleSubmit}
+              action="/"
+              method="get"
+              id="form"
+            >
+              <div id="user-input-container">
+                <label>
+                  <EmailAddress
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required
+                  />
+                </label>
+              </div>
+              <div id="signupBtn-container">
+                <input type="submit" value="Sign Up" id="submitBtn" />
+              </div>
+            </FormContainer>
+          </PopupBotContainer>
+        </PopupContainer>
       </Modal>
     </>
   );
