@@ -50,6 +50,31 @@ export const PopupTopTextContainer = styled.div`
   display: inline-block;
 `;
 
+export const PopupMidContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  &:before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: #000;
+    left: 50px;
+    position: absolute;
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: #000;
+    right: 50px;
+    position: absolute;
+  }
+`;
+
 export const PopupBotTextContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -82,4 +107,14 @@ export const EmailAddress = styled.input`
   border-left: none;
   border-right: none;
   width: 100%;
+  padding: 10px;
+`;
+export const SignUpButton = styled.input`
+  padding: 15px;
+  font-size: 15px;
+  color: #fd8c94;
+  background-color: white;
+  border: 2px solid #fd8c94;
+  width: 100%;
+  vertical-align: middle;
 `;

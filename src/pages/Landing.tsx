@@ -1,17 +1,18 @@
-import React, { FormEvent, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { FormEvent, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Modal } from "../components/Modal";
-import { ThemeProvider } from "styled-components";
 // import { theme, GlobalStyle } from "../Variables.styled";
 import {
   PopupContainer,
   PopupTopContainer,
+  PopupMidContainer,
   PopupBotContainer,
   XButton,
   PopupTopTextContainer,
   PopupBotTextContainer,
   FormContainer,
   EmailAddress,
+  SignUpButton,
 } from "./Landing.styled";
 
 // interface LandingProps {
@@ -49,9 +50,11 @@ export const Landing: LandingComponent = () => {
           <PopupTopContainer>
             <PopupTopTextContainer>
               <h1>Get Your Style On</h1>
-              <hr />
             </PopupTopTextContainer>
-            <h2>&</h2>
+            <PopupMidContainer>
+              <h2>&</h2>
+            </PopupMidContainer>
+
             <PopupBotTextContainer>
               <div id="and-container"></div>
               <h3>20</h3>
@@ -79,7 +82,7 @@ export const Landing: LandingComponent = () => {
                 </label>
               </div>
               <div id="signupBtn-container">
-                <input type="submit" value="Sign Up" id="submitBtn" />
+                <SignUpButton type="submit" value="Sign Up" id="submitBtn" />
               </div>
             </FormContainer>
           </PopupBotContainer>
