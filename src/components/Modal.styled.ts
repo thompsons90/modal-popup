@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../utils/Breakpoints";
 
 export const OuterModal = styled.div`
   position: fixed;
@@ -17,7 +18,13 @@ export const OuterModal = styled.div`
 
 export const InnerModal = styled.div`
   width: 95%;
-  height: 82%;
+  height: 87%;
   background-color: white;
   z-index: 10;
+  @media ${device.desktop} {
+    width: 800px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+  }
 `;

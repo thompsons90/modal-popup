@@ -5,6 +5,19 @@ export const OpenModal = styled.button`
   z-index: -1;
 `;
 
+export const ModalContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+`;
+export const StylishLine = styled.img`
+  height: 100%;
+  transform: translateX(50px);
+  @media ${device.mobile} {
+    display: none;
+  }
+`;
+
 export const PopupContainer = styled.div`
   width: 90%;
   height: 520px;
@@ -35,6 +48,12 @@ export const PopupContainer = styled.div`
   p {
     font-size: 23px;
   }
+  @media ${device.desktop} {
+    // display: flex;
+    vertical-align: middle;
+    height: 100%;
+    width: 95%;
+  }
 `;
 export const XButton = styled.button`
   float: right;
@@ -46,6 +65,15 @@ export const XButton = styled.button`
     cursor: pointer;
   }
   font-size: 25px;
+`;
+
+export const InsideContainer = styled.div`
+  @media ${device.desktop} {
+    display: flex;
+    margin: auto;
+    width: 70%;
+    transform: translateY(90px);
+  }
 `;
 
 export const PopupTopContainer = styled.div`
@@ -66,12 +94,22 @@ export const PopupTopContainer = styled.div`
     p {
       font-size: 28px;
     }
+    width: 200px;
+    height: 350px;
+    text-align: left;
+    padding: 0;
   } ;
 `;
 
 export const PopupTopTextContainer = styled.div`
   letter-spacing: 10px;
-  display: inline-block;
+  display: inline;
+
+  content-fit: @media ${device.desktop} {
+    height: 500px;
+    border: 2px solid green;
+    align-items: center;
+  }
 `;
 
 export const PopupMidContainer = styled.div`
@@ -82,14 +120,22 @@ export const PopupMidContainer = styled.div`
   align-items: center;
   h2 {
     margin: 4px;
-    mar
   }
-
   hr {
-    flex-grow: 1;
+    width: 120px;
     height: 2px;
     background-color: #e9e9e9;
     border: none;
+  }
+  @media ${device.desktop} {
+    width: 55px;
+    display: inline-block;
+    height: 300px;
+    hr {
+      height: 100px;
+      width: 2px;
+      transform: translateX(20px);
+    }
   }
 `;
 
@@ -102,12 +148,30 @@ export const PopupBotTextContainer = styled.div`
     line-height: 0.85;
   }
   height: 150px;
+  @media ${device.desktop} {
+    margin: 0;
+  }
 `;
 
-export const PopupBotContainer = styled.div``;
+export const PopupBotContainer = styled.div`
+  @media ${device.desktop} {
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 300px;
+    padding-top: 50px;
+    margin: 0;
+  }
+`;
 
 export const FormContainer = styled.form`
   width: 100%;
+  @media ${device.desktop} {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 `;
 
 export const EmailAddress = styled.input`
@@ -120,19 +184,26 @@ export const EmailAddress = styled.input`
   text-align: center;
   outline: none;
   border-top: none;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid #464646;
   border-left: none;
   border-right: none;
   width: 100%;
   padding-bottom: 10px;
 `;
 export const SignUpButton = styled.input`
-  padding: 15px;
+  padding: 10px;
   margin-top: 20px;
   font-size: 15px;
   color: #fd8c94;
   background-color: white;
-  border: 2px solid #fd8c94;
+  border: 3px solid #fd8c94;
   width: 100%;
   vertical-align: middle;
+  @media ${device.desktop} {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 30%;
+    transform: translateY(-14px);
+  }
 `;
