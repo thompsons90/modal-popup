@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../utils/Breakpoints";
 
 export const OpenModal = styled.button`
   z-index: -1;
@@ -7,7 +8,7 @@ export const OpenModal = styled.button`
 export const PopupContainer = styled.div`
   width: 90%;
   margin: auto;
-  padding-top: 25px;
+  padding-top: 10px;
 `;
 export const XButton = styled.button`
   float: right;
@@ -18,6 +19,7 @@ export const XButton = styled.button`
     color: #464646;
     cursor: pointer;
   }
+  font-size: 25px;
 `;
 
 export const PopupTopContainer = styled.div`
@@ -48,6 +50,21 @@ export const PopupTopContainer = styled.div`
   text-align: center;
   width: 85%;
   margin: auto;
+  padding-top: 40px;
+  @media ${device.desktop} {
+    h1 {
+      font-size: 65px;
+    }
+    h3 {
+      font-size: 167px;
+    }
+    h4 {
+      font-size: 82px;
+    }
+    p {
+      font-size: 28px;
+    }
+  } ;
 `;
 
 export const PopupTopTextContainer = styled.div`
@@ -91,6 +108,7 @@ export const PopupBotContainer = styled.div`
   align-text: center;
   align-items: center;
   width: 90%;
+  height: 20px;
   margin: auto;
 `;
 

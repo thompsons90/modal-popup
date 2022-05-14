@@ -42,7 +42,6 @@ export const Landing: LandingComponent = () => {
               <h2>&</h2>
               <hr />
             </PopupMidContainer>
-
             <PopupBotTextContainer>
               <h3>20</h3>
               <div id="percent-container">
