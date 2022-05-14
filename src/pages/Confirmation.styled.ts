@@ -30,8 +30,11 @@ export const ConfirmationContainer = styled.div`
 `;
 
 export const ConfirmTopTextContainer = styled.div`
-  display: block;
   letter-spacing: 10px;
+  h1 {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const ShopButton = styled(Link)`

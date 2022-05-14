@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
+export const OpenModal = styled.button`
+  z-index: -1;
+`;
+
 export const PopupContainer = styled.div`
   width: 90%;
   margin: auto;
+  padding-top: 25px;
 `;
 export const XButton = styled.button`
   float: right;
@@ -52,26 +57,20 @@ export const PopupTopTextContainer = styled.div`
 
 export const PopupMidContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-evenly;
-  &:before {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 2px;
-    background: #000;
-    left: 50px;
-    position: absolute;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  h2 {
+    margin: 4px;
+    mar
   }
-  &:after {
-    content: "";
-    display: block;
-    width: 100px;
+
+  hr {
+    flex-grow: 1;
     height: 2px;
-    background: #000;
-    right: 50px;
-    position: absolute;
+    background-color: #e9e9e9;
+    border: none;
   }
 `;
 
@@ -79,6 +78,10 @@ export const PopupBotTextContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  h4,
+  p {
+    line-height: 0.85;
+  }
 `;
 
 export const PopupBotContainer = styled.div`
@@ -87,12 +90,14 @@ export const PopupBotContainer = styled.div`
   justify-content: center;
   align-text: center;
   align-items: center;
-  width: 100%;
+  width: 90%;
+  margin: auto;
 `;
 
 export const FormContainer = styled.form`
   width: 100%;
 `;
+
 export const EmailAddress = styled.input`
   &:placeholder {
     color: black;
@@ -107,7 +112,7 @@ export const EmailAddress = styled.input`
   border-left: none;
   border-right: none;
   width: 100%;
-  padding: 10px;
+  padding-bottom: 10px;
 `;
 export const SignUpButton = styled.input`
   padding: 15px;

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Modal } from "../components/Modal";
 // import { theme, GlobalStyle } from "../Variables.styled";
 import {
+  OpenModal,
   PopupContainer,
   PopupTopContainer,
   PopupMidContainer,
@@ -15,18 +16,11 @@ import {
   SignUpButton,
 } from "./Landing.styled";
 
-// interface LandingProps {
-//   open: boolean;
-//   onClose: () => void;
-// }
 type LandingComponent = () => JSX.Element | null;
 
 export const Landing: LandingComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
-  // const [hidden, setHidden] = useState(false);
   const navigate = useNavigate();
-
-  // if (!open) return null;
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -35,15 +29,7 @@ export const Landing: LandingComponent = () => {
 
   return (
     <>
-      {/* <Link to="/confirmation" /> */}
-      <div
-        id="special-offer-container"
-        // className={hidden === true ? `overlay ` : `hidden`}
-      >
-        <button onClick={() => setIsOpen(true)}>Special Offer!</button>
-        {/* <FirstPopup open={isOpen} onClose={() => setIsOpen(false)}></FirstPopup> */}
-      </div>
-
+      <OpenModal onClick={() => setIsOpen(true)}>Open Modal</OpenModal>
       <Modal isOpen={isOpen}>
         <PopupContainer>
           <XButton onClick={() => setIsOpen(false)}>X</XButton>
@@ -52,11 +38,12 @@ export const Landing: LandingComponent = () => {
               <h1>Get Your Style On</h1>
             </PopupTopTextContainer>
             <PopupMidContainer>
+              <hr />
               <h2>&</h2>
+              <hr />
             </PopupMidContainer>
 
             <PopupBotTextContainer>
-              <div id="and-container"></div>
               <h3>20</h3>
               <div id="percent-container">
                 <h4>%</h4>
@@ -71,19 +58,15 @@ export const Landing: LandingComponent = () => {
               method="get"
               id="form"
             >
-              <div id="user-input-container">
-                <label>
-                  <EmailAddress
-                    type="email"
-                    name="email"
-                    placeholder="Email Address"
-                    required
-                  />
-                </label>
-              </div>
-              <div id="signupBtn-container">
-                <SignUpButton type="submit" value="Sign Up" id="submitBtn" />
-              </div>
+              <label>
+                <EmailAddress
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  required
+                />
+              </label>
+              <SignUpButton type="submit" value="Sign Up" id="submitBtn" />
             </FormContainer>
           </PopupBotContainer>
         </PopupContainer>

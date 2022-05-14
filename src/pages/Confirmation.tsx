@@ -14,7 +14,13 @@ export const Confirmation = () => {
       </BackButton>
       <ConfirmationContainer>
         <ConfirmTopTextContainer>
-          <h1>Just Like Old Friends</h1>
+          {/* <h1>Just Like Old Friends</h1> */}
+          <h1>
+            <span>Just </span>
+            <span>Like </span>
+            <span>Old </span>
+            <span>Friends</span>
+          </h1>
         </ConfirmTopTextContainer>
 
         <div id="confirm-bot-text">
