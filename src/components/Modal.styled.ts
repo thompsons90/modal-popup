@@ -12,7 +12,7 @@ export const OuterModal = styled.div`
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  padding-top: 10px;
+  padding-top: 30px;
 `;
 
 export const InnerModal = styled.div`

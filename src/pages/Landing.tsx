@@ -1,7 +1,7 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Modal } from "../components/Modal";
-// import { theme, GlobalStyle } from "../Variables.styled";
+import "../App.scss";
 import {
   OpenModal,
   PopupContainer,
@@ -28,7 +28,7 @@ export const Landing: LandingComponent = () => {
   };
 
   return (
-    <>
+    <div id="modal-container">
       <OpenModal onClick={() => setIsOpen(true)}>Open Modal</OpenModal>
       <Modal isOpen={isOpen}>
         <PopupContainer>
@@ -42,6 +42,8 @@ export const Landing: LandingComponent = () => {
               <h2>&</h2>
               <hr />
             </PopupMidContainer>
+          </PopupTopContainer>
+          <PopupBotContainer>
             <PopupBotTextContainer>
               <h3>20</h3>
               <div id="percent-container">
@@ -49,8 +51,6 @@ export const Landing: LandingComponent = () => {
                 <p>OFF</p>
               </div>
             </PopupBotTextContainer>
-          </PopupTopContainer>
-          <PopupBotContainer>
             <FormContainer
               onSubmit={handleSubmit}
               action="/"
@@ -70,6 +70,6 @@ export const Landing: LandingComponent = () => {
           </PopupBotContainer>
         </PopupContainer>
       </Modal>
-    </>
+    </div>
   );
 };
