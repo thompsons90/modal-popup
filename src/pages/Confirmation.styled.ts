@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { device } from "../utils/Breakpoints";
 
 export const XButton = styled.button`
   float: right;
@@ -29,6 +30,9 @@ export const ConfirmationContainer = styled.div`
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+  @media ${device.desktop} {
+    padding-top: 55px;
+  }
 `;
 
 export const ConfirmTopTextContainer = styled.div`
@@ -38,10 +42,24 @@ export const ConfirmTopTextContainer = styled.div`
     flex-direction: column;
   }
   padding-top: 30px;
+  @media ${device.desktop} {
+    h1 {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 16px;
+      font-size: 65px;
+    }
+    width: 80%;
+    margin-right: 20px;
+  }
 `;
 
 export const DesignerImg = styled.img`
   width: 60%;
+  @media ${device.desktop} {
+    width: 150px;
+  }
 `;
 
 export const ConfirmBotTextContainer = styled.div`
@@ -49,6 +67,9 @@ export const ConfirmBotTextContainer = styled.div`
   line-height: 2;
   padding-top: 20px;
   padding-bottom: 20px;
+  @media ${device.desktop} {
+    margin-right: 20px;
+  }
 `;
 
 export const ShopButton = styled(Link)`
@@ -61,4 +82,10 @@ export const ShopButton = styled(Link)`
   vertical-align: middle;
   text-decoration: none;
   text-align: center;
+  @media ${device.desktop} {
+    width: 75px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
 `;

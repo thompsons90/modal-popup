@@ -23,7 +23,7 @@ export const InnerModal = styled.div`
   z-index: 10;
   @media ${device.desktop} {
     width: 800px;
-    height: 600px;
+    height: 550px;
     display: flex;
     flex-direction: column;
   }

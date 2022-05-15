@@ -199,6 +199,10 @@ export const SignUpButton = styled.input`
   border: 3px solid #fd8c94;
   width: 100%;
   vertical-align: middle;
+  &:hover {
+    color: #464646;
+    cursor: pointer;
+  }
   @media ${device.desktop} {
     border-top: none;
     border-left: none;
