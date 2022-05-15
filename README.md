@@ -1,4 +1,38 @@
-# Getting Started with Create React App
+# 👋 Introducing Modals'R'Us!
+
+## Scott Thompson's Listrak Project
+
+This project is a quick display of my ability to create popup modals, set to design specifications, and redirect the user to a confirmation page after they submit their required email address.
+
+# 🚀 Launched Site
+
+Here is a link to the published site, hosted with Netlify. I hope you enjoy it!
+
+> [Hosted Site Link](https://master--dazzling-biscochitos-3962ed.netlify.app/)
+
+## 📱 Responsive and mobile-friendly
+
+- This project was built to work seemlessly on both mobile devices and desktop.
+<p>If this was personal project, I would have set breakpoints for mobile-landscape and tablets as well.</p>
+
+# 🏗️ Build Decisions
+
+- [@types/React](https://www.npmjs.com/package/@types/react): TypeScript definitions for React.
+- [typescript](https://www.npmjs.com/package/typescript): TypeScript is a language for application scale JavaScript development
+<p>I chose to use TypeScript for its structure and readability of types. Other developers can look at the code and have a good idea of my intentions without the need for using methods like 'typeof.' TypeScript is also good at detecting bugs early on at the compile stage.</p>
+
+- [react](https://www.npmjs.com/package/react): React is a JavaScript library for building user interfaces.
+<p>I also chose ReactJS for its reusable components, e.g. the primary modal which is used again on the confirmation page. Reacts combined use of JavaScript and HTML tags make it intuitive and easy to deal with large sets of data containing the DOM. Plus it's a widely popular and supported library.</p>
+
+- [@types/react-router](https://www.npmjs.com/package/@types/react-router): TypeScript definitions for React Router
+- [@types/react-router-dom](https://www.npmjs.com/package/@types/react-router-dom): TypeScript definitions for react-router-dom
+<p>I used React Router V6 to navigate from the initial popup modal to the confirmation page, pending the required email input has an @ symbol and characters to follow. It's an easy to use client-side routing technology and comes in a small package as to not take up too much room.</p>
+
+- [@types/styled-components](https://www.npmjs.com/package/@types/styled-components): TypeScript definitions for styled-components.
+<p>I opted for Styled Components mainly for their encapsulation and scalability. I also considered using Sass with BEM naming conventions, which is also great at frontend components. Or CSS Modules for local scope, but CSS can get bulky after a while so it doesn't scale as nicely once projects become larger.</p>
+<p>The project was styled first as the mobile version with global breakpoints inside the utils folder for desktop to be added in where needed.</p>
+
+# 🏗️ Deploy for review
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -6,7 +40,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+### `yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,33 +48,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+- yarn add: adds a package to use in your current package.
+- yarn init: initializes the development of a package.
+- yarn install: installs all the dependencies defined in a package.json file.
+- yarn publish: publishes a package to a package manager.
+- yarn remove: removes an unused package from your current package.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Default Command
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Running yarn with no command will run yarn install, passing through any provided flags.
