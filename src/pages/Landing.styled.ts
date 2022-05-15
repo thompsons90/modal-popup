@@ -10,6 +10,7 @@ export const ModalContainer = styled.div`
   width: 100%;
   display: flex;
 `;
+
 export const StylishLine = styled.img`
   height: 100%;
   transform: translateX(50px);
@@ -55,6 +56,7 @@ export const PopupContainer = styled.div`
     width: 95%;
   }
 `;
+
 export const XButton = styled.button`
   float: right;
   border: none;
@@ -104,7 +106,6 @@ export const PopupTopContainer = styled.div`
 export const PopupTopTextContainer = styled.div`
   letter-spacing: 10px;
   display: inline;
-
   content-fit: @media ${device.desktop} {
     height: 500px;
     border: 2px solid green;
@@ -190,6 +191,7 @@ export const EmailAddress = styled.input`
   width: 100%;
   padding-bottom: 10px;
 `;
+
 export const SignUpButton = styled.input`
   padding: 10px;
   margin-top: 20px;

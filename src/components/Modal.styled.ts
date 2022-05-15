@@ -1,3 +1,4 @@
+import { scryRenderedComponentsWithType } from "react-dom/test-utils";
 import styled from "styled-components";
 import { device } from "../utils/Breakpoints";
 
