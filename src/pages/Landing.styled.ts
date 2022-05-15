@@ -197,6 +197,7 @@ export const SignUpButton = styled.input`
   color: #fd8c94;
   background-color: white;
   border: 3px solid #fd8c94;
+  border-radius: 0px;
   width: 100%;
   vertical-align: middle;
   &:hover {
