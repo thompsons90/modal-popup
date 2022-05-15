@@ -34,16 +34,32 @@ Here is a link to the published site, hosted with Netlify. I hope you enjoy it!
 
 # 🏗️ Deploy for review
 
+1. Clone the repository
+
+```sh
+git clone https://github.com/thompsons90/listrak-popup-assessment.git
+```
+
+2. Install dependencies
+
+```sh
+yarn install
+```
+
+3. Run the app in development mode
+
+```sh
+yarn start
+```
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
